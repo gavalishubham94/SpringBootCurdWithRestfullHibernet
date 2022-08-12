@@ -13,4 +13,18 @@ public interface EmployeeDaoI {
 	public Employee getById(Integer empId);
 	
 	public List<Employee> getAllEmployees();
+	
+	public List<Employee> getAgeLessThan(int Age);
+	
+	public Employee Update(Employee employee);
+	
+	public List<Employee> updateAll(List<Employee> employees);
+	
+	
+	public Employee LoginCheck(String email,int eid);
+	
+	
+	public Employee DeletebyId(int id);
+	
+	public String DeleteAll();
 }

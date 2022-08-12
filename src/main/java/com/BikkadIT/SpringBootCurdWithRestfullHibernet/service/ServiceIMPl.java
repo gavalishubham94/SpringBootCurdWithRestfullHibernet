@@ -48,4 +48,53 @@ public class ServiceIMPL implements ServiceI{
 		return employees ;
 	
 	}
+
+
+
+	@Override
+	public List<Employee> getAgeLessThan(int Age) {
+		List<Employee> list = employeeDaoI.getAgeLessThan(Age);
+		return list;
+	}
+
+
+
+	@Override
+	public Employee update(Employee employee) {
+		Employee employee2 = employeeDaoI.Update(employee);
+		
+		return employee2;
+	}
+	
+	public List<Employee> updateAll(List<Employee> employees){
+		List<Employee> list = employeeDaoI.updateAll(employees);
+		
+		return list;
+
+	}
+	
+	public Employee LoginCheck(String email,int eid) {
+		
+		
+		Employee employee = employeeDaoI.LoginCheck(email, eid);
+	
+		return employee;
+	
+	}
+	
+	public Employee DeletebyId(int id) {
+	
+		Employee employee = employeeDaoI.DeletebyId(id);
+		
+		return employee;
+	
+	}
+	
+	public String DeleteAll() {
+		String msg = employeeDaoI.DeleteAll();
+	
+		return msg;
+
+	}
+	
 }
